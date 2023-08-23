@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Authors: Rodrigo Rebelo & Luiz Gustavo -->
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TP_01_PDMI6.MainPage"
+             Title="My MainPage"
+             BackgroundColor="AliceBlue"
+             >
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin"
+                    Value="0,2,0,2"
+                />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                FontSize="Large"
+                Text="Aplicação Teste"
+                VerticalOptions="Center"
+                FontAttributes="Bold"
+                TextColor="Black"
+                HorizontalOptions="Center" />
+
+            <Entry
+                 x:Name="userInput"
+                 TextColor="Black"
+                 MaxLength="20"
+                 Placeholder="Digite seu usuario"/>
+
+            <Entry
+                 x:Name="passwordInput"
+                 TextColor="Black"
+                 IsPassword="True"
+                 MaxLength="20"
+                 Placeholder="Digite sua senha"/>
+
+            <Button
+                x:Name="ConfirmBtn"
+                Clicked="Login"
+                Text="Ok"
+                Grid.Row="1"
+                Grid.Column="0"
+                TextColor="WhiteSmoke"
+                BackgroundColor="MediumPurple"
+                SemanticProperties.Hint="Confirm your input data"/>
+
+            <Button
+                x:Name="ClearBtn"
+                Clicked="ClearInputs"
+                Text="Clear"
+                SemanticProperties.Hint="Clear all the inputs"/>
+
+            <Button
+                x:Name="CreditsBtn"
+                BackgroundColor="White"
+                Text="Credits"
+                Clicked="GoToCreditsPage"
+                SemanticProperties.Hint="Show the Credits screen" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

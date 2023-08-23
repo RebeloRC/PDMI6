@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Authors: Rodrigo Rebelo & Luiz Gustavo -->
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TP_01_PDMI6.Pages.CreditsPage"
+             Title="CreditsPage"
+             BackgroundColor="AliceBlue"
+             >
+    <VerticalStackLayout>
+
+        <Label
+            FontSize="Header"
+            FontAttributes="Bold"
+            TextColor="Black"
+            Margin="20"
+            Text="Authors"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+
+        <Label
+            FontSize="Medium"
+            TextColor="Black"
+            Text="Rodrigo Rebelo (CB3016871)"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+
+        <Label
+            FontSize="Medium"
+            TextColor="Black"
+            Text="Luiz Gustavo (CB3015386)"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>
