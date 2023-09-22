@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TarefasApp.MainPage"
+             Title="Home Page"
+             BackgroundColor="#f0f0f0">
+
+    <CollectionView x:Name="taskCollectionView"
+                     SelectionMode="Single"
+                    ItemsSource="{Binding Tasks}"
+                SelectionChanged="OnItemSelected"
+                VerticalOptions="FillAndExpand">
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid Padding="10" BackgroundColor="White" Margin="5,5,5,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0"
+                           Text="{Binding Title}"
+                           FontSize="18"
+                           TextColor="#333"
+                           FontAttributes="Bold"/>
+
+                    <Label Grid.Row="1"
+                           Text="{Binding Description}"
+                           FontSize="14"
+                           TextColor="#666"
+                           LineBreakMode="TailTruncation"/>
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+</ContentPage>
